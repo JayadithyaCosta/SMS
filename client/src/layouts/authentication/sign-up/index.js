@@ -10,6 +10,10 @@ import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDInput from "components/MDInput";
 import MDButton from "components/MDButton";
+import Abacus from "assets/images/logo-ct.png";
+import MDAvatar from "components/MDAvatar";
+
+import Grid from "@mui/material/Grid";
 
 // Authentication layout components
 import CoverLayout from "layouts/authentication/components/CoverLayout";
@@ -23,7 +27,7 @@ function Cover() {
       <Card>
         <MDBox
           variant="gradient"
-          bgColor="info"
+          bgColor="dark"
           borderRadius="lg"
           coloredShadow="success"
           mx={2}
@@ -32,12 +36,12 @@ function Cover() {
           mb={1}
           textAlign="center"
         >
-          <MDTypography variant="h4" fontWeight="medium" color="white" mt={1}>
-            Join us today
-          </MDTypography>
-          <MDTypography display="block" variant="button" color="white" my={1}>
-            Enter your email and password to register
-          </MDTypography>
+          <Grid container spacing={3} justifyContent="center" sx={{ mt: 1, mb: 2 }}>
+            <MDAvatar src={Abacus} alt="Avatar" variant="square" />
+            <MDTypography variant="h4" fontWeight="small" color="white" mt={1}>
+              ABACUS
+            </MDTypography>
+          </Grid>
         </MDBox>
         <MDBox pt={4} pb={3} px={3}>
           <MDBox component="form" role="form">
